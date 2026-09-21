@@ -1,17 +1,16 @@
 <script lang="ts">
     import type { Airport } from "$lib";
+    import { de } from "$lib/i18n/de";
     export let data;
 
     export let form;
 
     const airports: Airport[] = data.airports;
 
-    // create an array of days for display
-    // include the name starting with Monday and a value of 1
-    // end with Sunday as 7
+    // Wochentage für die Anzeige: Montag beginnt mit dem Wert 1.
     const days = Array.from({length: 7}, (_, i) => {
         return {
-            name: new Intl.DateTimeFormat('en-US', { weekday: 'long'}).format(new Date(0, 0, i + 1)),
+            name: new Intl.DateTimeFormat(de.locale, { weekday: 'long'}).format(new Date(2021, 7, i + 2)),
             value: i + 1
         }
     });
@@ -21,31 +20,36 @@
     }
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<svelte:head>
+    <title>{de.title}</title>
+    <meta name="description" content={de.intro} />
+</svelte:head>
+
+<h1>{de.title}</h1>
+<p>{de.intro}</p>
 
 <form method="POST" action="?/getDelay">
 
-    <!-- create dropdown list of airports with id as key -->
-    <select name="airport">
+    <label for="airport">{de.airportLabel}</label>
+    <select id="airport" name="airport">
         {#each airports as airport (airport.id)}
             <option value={airport.id}>{airport.name}</option>
         {/each}
     </select>
 
-    <!-- create dropdown list of days with value as key -->
-    <select name="day">
+    <label for="day">{de.dayLabel}</label>
+    <select id="day" name="day">
         {#each days as day (day.value)}
             <option value={day.value}>{day.name}</option>
         {/each}
     </select>
     <br>
 
-    <button type="submit">Find delay</button>
+    <button type="submit">{de.submit}</button>
 </form>
 
 <br />
 
 {#if form && form.result}
-    <div>There is a {Math.round(form.result.delay * 100)}% chance of a delay. We are {Math.round(form.result.certainty * 100)}% sure.</div>
+    <div>{de.result(Math.round(form.result.delay * 100), Math.round(form.result.certainty * 100))}</div>
 {/if}
