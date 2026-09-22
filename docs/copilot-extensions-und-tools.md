@@ -77,48 +77,11 @@ npx @playwright/mcp@latest
 - **GitHub Apps** – Serverseitige Integrationen mit granularen Berechtigungen.
 - **Dependabot** – automatisierte Abhängigkeits-Updates & Sicherheits-Patches.
 - **CodeQL** – automatisierte Security-/Code-Qualitätsanalyse.
-- **Copilot Coding Agent** – bearbeitet GitHub Issues autonom und öffnet PRs.
-- **Agent Merge / Auto-Merge-Workflows** – automatisierte Review-Ticks, Konflikt-
-  und CI-Fixes an offenen Pull Requests.
 
-## 5. Custom Agents, Chat Modes & Skills (VS Code / Copilot Chat)
-
-Neben Marketplace-Extensions lässt sich Copilot durch dateibasierte
-Anpassungen im Repo erweitern:
-
-| Mechanismus | Ort | Zweck |
-|---|---|---|
-| Custom Agents | `.github/agents/*.md` (YAML-Frontmatter) | Eigene Personas mit festen Tools/Instructions/Modell |
-| Chat Modes | `.github/chatmodes/*.chatmode.md` | Vordefinierte Chat-Personas (z. B. Security-Reviewer, Planner) |
-| Instructions | `.github/instructions/*.instructions.md` | Repo-/Pfad-spezifische Verhaltensregeln |
-| Prompt-Dateien | `.github/prompts/*.prompt.md` | Wiederverwendbare Slash-Command-Prompts |
-| Agent Plugins | Marketplace-Pakete | Bündeln Skills, Tools, Hooks, MCP-Server, Slash-Commands |
-
-Community-Sammlungen:
-- https://github.com/github/awesome-copilot – Instructions, Prompts, Chat Modes, Agents
-- https://github.com/dfinke/awesome-copilot-chatmodes – kuratierte `.chatmode.md`-Personas
-
-## 6. Offizielle & verbreitete MCP-Server
-
-| MCP-Server | Zweck |
-|---|---|
-| `github/github-mcp-server` | GitHub-Issues/PRs/Repos direkt ansprechen |
-| `microsoft/mcp` (Azure.Mcp.Server, Fabric.Mcp.Server) | Azure-Ressourcen, Power BI/Fabric-Datenzugriff |
-| `@playwright/mcp` | Browserautomatisierung/E2E-Tests |
-| `modelcontextprotocol/servers` (filesystem, fetch, git, sequential-thinking u. a.) | Referenzimplementierungen des MCP-Projekts |
-| `modelcontextprotocol/registry` | zentrale, durchsuchbare Registry aller bekannten MCP-Server |
-
-Enterprise-Admins können eine eigene, geprüfte MCP-Registry/Allowlist
-konfigurieren, siehe
-https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-mcp-usage/configure-mcp-registry
-
-## 7. Offizielle Dokumentation
+## 5. Offizielle Dokumentation
 
 - https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-finding-installing
 - https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers
-- https://docs.github.com/en/copilot/how-tos/provide-context/use-mcp-in-your-ide/extend-copilot-chat-with-mcp
-- https://docs.github.com/en/copilot/reference/custom-agents-configuration
-- https://code.visualstudio.com/docs/agent-customization/agent-plugins
 - https://github.blog/changelog/2025-02-19-announcing-the-general-availability-of-github-copilot-extensions/
 
 ## Hinweis
