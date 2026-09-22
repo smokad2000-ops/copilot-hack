@@ -7,10 +7,16 @@
 // }
 
 export async function load({ fetch }) {
-  const res = await fetch(`http://localhost:5000/airports`);
-  const airports = await res.json();
-  // console.log({airports})
-  return {airports};
+  try {
+    const res = await fetch(`http://localhost:5000/airports`);
+    if (!res.ok) {
+      return { airports: [] };
+    }
+    const airports = await res.json();
+    return { airports };
+  } catch {
+    return { airports: [] };
+  }
 }
 
 export const actions = {
