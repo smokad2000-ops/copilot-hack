@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DIRKS KI-SYSTEM V7: menschlich geführtes Analyse- und Strukturierungssystem. Quellenbindung, Freigabegates und Audit-Trail statt automatischer Entscheidung.">
+    <title>DIRKS KI-SYSTEM V7: Redaktion für strukturierte Fakten</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="neon-field" aria-hidden="true"></div>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <span>21. September 2026 · Referenzfassung V7.0</span>
+        <span class="topbar-right">DIRKS-FW-007 · konzeptionell, nicht auditiert</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="#top" aria-label="DIRKS Startseite">
+          <span class="smoke-logo" aria-hidden="true">
+            <span class="smoke-ring"></span>
+            <span class="smoke-wisp w1"></span>
+            <span class="smoke-wisp w2"></span>
+            <span class="smoke-wisp w3"></span>
+          </span>
+          <span class="brand-word glitch" data-text="DIRKS">DIRKS</span>
+          <span class="brand-sub">KI-SYSTEM</span>
+        </a>
+        <button class="burger" id="burger" aria-expanded="false" aria-controls="mainnav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav class="mainnav" id="mainnav" aria-label="Ressorts">
+        <a href="#uebersicht">Übersicht</a>
+        <a href="#prinzipien">Leitprinzipien</a>
+        <a href="#rollen">Rollenmodell</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#status">Statusmodell</a>
+        <a href="#freigabe">Freigabe &amp; Audit</a>
+        <a href="#datenschutz">Datenschutz</a>
+        <a href="#tests">Testkatalog</a>
+        <a href="#beispiele">Beispiele</a>
+        <a href="#pilot">Pilot</a>
+      </nav>
+    </header>
+
+    <div class="ticker" aria-label="Statusmeldungen">
+      <div class="ticker-label">LIVE</div>
+      <div class="ticker-track">
+        <span>SENDABLE entsteht nur durch dokumentierte menschliche Freigabe.</span>
+        <span>Unklare Zustellung oder Rechtsgrundlage erzeugt BLOCKED, kein geschätztes Datum.</span>
+        <span>Erfundene Rechtsquellen sind ausgeschlossen: keine Normen, Urteile oder Aktenzeichen ohne Beleg.</span>
+        <span>Aggressive Formulierungen werden vor der Freigabe automatisch markiert.</span>
+        <span>Pilotstatus: konsolidierte Referenzfassung, kein zugelassenes Rechtssystem.</span>
+        <span>SENDABLE entsteht nur durch dokumentierte menschliche Freigabe.</span>
+        <span>Unklare Zustellung oder Rechtsgrundlage erzeugt BLOCKED, kein geschätztes Datum.</span>
+        <span>Erfundene Rechtsquellen sind ausgeschlossen: keine Normen, Urteile oder Aktenzeichen ohne Beleg.</span>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- HERO / ÜBERSICHT -->
+      <section class="hero" id="uebersicht">
+        <div class="hero-atmosphere" aria-hidden="true">
+          <span class="smoke-drift d1"></span>
+          <span class="smoke-drift d2"></span>
+          <span class="smoke-drift d3"></span>
+        </div>
+        <div class="wrap hero-grid">
+          <article class="hero-main">
+            <p class="kicker kicker-red">Leitartikel · Mission</p>
+            <h1>DIRKS ordnet die Akte.<br>Die Entscheidung trifft der Mensch.</h1>
+            <p class="lede">
+              DIRKS ist ein menschlich geführtes Analyse-, Strukturierungs- und
+              Entscheidungsvorbereitungssystem. Es ordnet Informationen, prüft Quellen,
+              macht Unsicherheiten sichtbar und bereitet Kommunikation vor; es ersetzt
+              ausdrücklich <strong>keine</strong> Rechtsberatung, anwaltliche Vertretung,
+              behördliche oder gerichtliche Entscheidung, pädagogische Fachentscheidung,
+              Therapie oder Diagnose.
+            </p>
+            <ul class="hero-facts">
+              <li><b>Herkunft</b> Verantwortung, technische Arbeit, familiäre Erfahrung, Behördenkontakt</li>
+              <li><b>Zweck</b> Ordnung, ehrliche Unsicherheit, entlastete Fachprüfung</li>
+              <li><b>Grenze</b> Die Technologie ist das Werkzeug: der Mensch bleibt maßgeblich</li>
+            </ul>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#prinzipien">Leitprinzipien lesen</a>
+              <a class="btn btn-ghost" href="DIRKS-FRAMEWORK-V7.md" download>V7 als Markdown laden ↓</a>
+            </div>
+          </article>
+
+          <aside class="hero-side">
+            <div class="side-box">
+              <p class="side-box-head">Zielgruppen</p>
+              <ul class="chip-list">
+                <li>Privatpersonen mit umfangreichen Behörden-/Rechtsunterlagen</li>
+                <li>Rechtsanwältinnen und Rechtsanwälte zur Vorstrukturierung</li>
+                <li>Beratungsstellen und soziale Organisationen</li>
+                <li>Interne Dokumentations- und Übergabeprozesse</li>
+              </ul>
+            </div>
+            <div class="side-box side-box-dark">
+              <p class="side-box-head">Kein Leistungsversprechen</p>
+              <p class="side-box-text">
+                DIRKS garantiert weder Erfolg noch eine bestimmte Behörden-, Gerichts- oder
+                Versicherungsentscheidung. Ein negatives Ergebnis oder ein
+                <code>STOPP</code> ist ein ebenso korrektes Ergebnis.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- LEITPRINZIPIEN -->
+      <section class="section section-alt" id="prinzipien">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker kicker-red">Ressort · Grundsätze</p>
+            <h2>Zehn unveränderliche Leitprinzipien</h2>
+            <p class="section-sub">Diese Prinzipien werden nicht durch Komfort, Tempo oder Nutzererwartung außer Kraft gesetzt.</p>
+          </div>
+          <ol class="principle-grid">
+            <li><span class="num">01</span><div><h3>Der Mensch führt</h3><p>Die KI ordnet, fragt nach und hinterfragt.</p></div></li>
+            <li><span class="num">02</span><div><h3>Quellen vor Behauptungen</h3><p>Wesentliche Aussagen brauchen eine Quelle.</p></div></li>
+            <li><span class="num">03</span><div><h3>Ergebnisoffenheit</h3><p>Punkte gegen die eigene Ausgangsthese werden aktiv gesucht.</p></div></li>
+            <li><span class="num">04</span><div><h3>Keine Erfindungen</h3><p>Keine erfundenen Normen, Urteile, Aktenzeichen, Quellen oder Fähigkeiten.</p></div></li>
+            <li><span class="num">05</span><div><h3>Transparente Unsicherheit</h3><p>Unklarheit wird als Unsicherheit oder <code>BLOCKED</code> ausgegeben.</p></div></li>
+            <li><span class="num">06</span><div><h3>Beweis vor Schlussfolgerung</h3><p>Tatsache, Bewertung und Rechtsfolge bleiben getrennt.</p></div></li>
+            <li><span class="num">07</span><div><h3>Menschliche Freigabe</h3><p><code>SENDABLE</code> entsteht nur durch dokumentierte Freigabe.</p></div></li>
+            <li><span class="num">08</span><div><h3>Datensparsamkeit</h3><p>Nur erforderliche und zulässig verarbeitete Daten verwenden.</p></div></li>
+            <li><span class="num">09</span><div><h3>Deeskalation</h3><p>Bestimmt und klar, aber nicht beleidigend oder unnötig drohend.</p></div></li>
+            <li><span class="num">10</span><div><h3>Nachvollziehbarkeit</h3><p>Jede wichtige Änderung gehört zu einer Version und einem Audit-Eintrag.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ROLLENMODELL -->
+      <section class="section" id="rollen">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker kicker-red">Ressort · Verantwortung</p>
+            <h2>Rollen- und Verantwortungsmodell</h2>
+            <p class="section-sub">Rollen werden im Arbeitsablauf und in den Berechtigungen technisch und organisatorisch getrennt.</p>
+          </div>
+          <div class="table-card">
+            <table>
+              <thead>
+                <tr><th>Rolle</th><th>Verantwortung</th><th>Darf nicht</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Betroffene Person</td><td>Angaben liefern, persönliche Daten prüfen, Entscheidung treffen</td><td>ungeprüfte KI-Ausgabe als Fachentscheidung behandeln</td></tr>
+                <tr><td>KI / DIRKS</td><td>ordnen, vergleichen, Quellen verknüpfen, Lücken markieren, Entwürfe erzeugen</td><td>Rechtsautorität oder Freigabe vortäuschen</td></tr>
+                <tr><td>Fachstelle / Rechtsanwalt</td><td>fachliche und rechtliche Bewertung im Zuständigkeitsbereich</td><td>ungeprüfte Systemausgabe übernehmen</td></tr>
+                <tr><td>Organisation</td><td>Zweck, Rollen, Datenschutz, Pilot und Qualität verantworten</td><td>unkontrollierte Nutzung mit Betroffenen-Daten erlauben</td></tr>
+                <tr><td>Behörde / Gericht</td><td>gesetzliche Prüfung und Entscheidung</td><td>entfällt</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORKFLOW -->
+      <section class="section section-alt" id="workflow">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker kicker-red">Ressort · Verfahren</p>
+            <h2>Der verbindliche Analyse-Workflow</h2>
+            <p class="section-sub">Zehn Phasen, jede mit einem nachvollziehbaren Zwischenstatus: keine Blackbox.</p>
+          </div>
+          <ol class="timeline">
+            <li><span class="tl-mark">P0</span><div><h3>Schutzrahmen</h3><p>Zweck, Zielgruppe, Rechtsordnung, Stichtag, Dringlichkeit, Datenschutzbedarf, gewünschtes Ergebnis.</p></div></li>
+            <li><span class="tl-mark">P1</span><div><h3>Kontextaufnahme</h3><p>Dokumente, E-Mails, Protokolle, Verträge, Code oder Logs erhalten Herkunft, Zeitbezug, Verarbeitungsstatus.</p></div></li>
+            <li><span class="tl-mark">P2</span><div><h3>Aufgabenklassifikation</h3><p>Zuordnung zu ARCHITEKTUR, SECURITY, JURISTIK, DOKUMENT, SCHRIFTSATZENTWURF, WORKFLOW, ANALYSE oder KOMMUNIKATION.</p></div></li>
+            <li><span class="tl-mark">P3</span><div><h3>Tatsachen- und Quellenmodell</h3><p>Jede Information: gesicherte Tatsache, Behauptung, persönliche Bewertung, Vermutung, Beweismittel, nicht verifiziert oder offene Frage.</p></div></li>
+            <li><span class="tl-mark">P4</span><div><h3>Chronologie</h3><p>Datum, Ereignis, Beteiligte, Quelle, Fristbezug, Status. Unklare Daten werden nicht geschätzt.</p></div></li>
+            <li><span class="tl-mark">P5</span><div><h3>Beweismatrix</h3><p>Behauptung, Quelle, Herkunft, Qualität, Gegenbeleg, Klärungsbedarf.</p></div></li>
+            <li><span class="tl-mark">P6</span><div><h3>Rechtsquellenprüfung</h3><p>Fundstelle, Zuständigkeit, Stichtagsfassung, Tatbestand/Rechtsfolge, Ausnahmen, Gegenauffassungen.</p></div></li>
+            <li><span class="tl-mark">P7</span><div><h3>Widerspruchsprüfung</h3><p>Quelle A vs. Quelle B, Widerspruch, Bedeutung, nächster Schritt. Gegenargumente werden geprüft, nicht nur erwähnt.</p></div></li>
+            <li><span class="tl-mark">P8</span><div><h3>Risiko &amp; Maßnahmen</h3><p>Zweck, Grundlage, Unsicherheit, Risiko, Gegenmaßnahme, Freigabebedarf, Priorität A/B/C.</p></div></li>
+            <li><span class="tl-mark">P9</span><div><h3>Ausgabe</h3><p>Kurzfassung, Tatsachen, offene Punkte, Analyse, Gegenargumente, nächste Schritte, Freigabestatus, Audit Trail.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- STATUSMODELL -->
+      <section class="section" id="status">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker kicker-red">Ressort · Technik</p>
+            <h2>Status- und Objektmodell</h2>
+            <p class="section-sub">Jedes Objekt trägt eine unveränderliche ID, Version, Verantwortliche Rolle und Status.</p>
+          </div>
+          <div class="status-cols">
+            <div class="status-block">
+              <h3>Kernobjekte</h3>
+              <div class="pill-row">
+                <span class="pill">CASE · Fall</span><span class="pill">DOC · Dokument</span>
+                <span class="pill">CLM · Aussage</span><span class="pill">SRC · Quelle</span>
+                <span class="pill">FRM · Frist</span><span class="pill">RISK · Risiko</span>
+                <span class="pill">DEC · Entscheidungsvorbereitung</span><span class="pill">APR · Freigabe</span>
+                <span class="pill">INC · Vorfall</span><span class="pill">TST · Test</span><span class="pill">VER · Version</span>
+              </div>
+            </div>
+            <div class="status-block">
+              <h3>Statuspipeline</h3>
+              <div class="status-pipeline">
+                <span class="status-badge s-draft">DRAFT</span>
+                <span class="status-arrow">→</span>
+                <span class="status-badge s-unverified">UNVERIFIED</span>
+                <span class="status-arrow">→</span>
+                <span class="status-badge s-review">REVIEW</span>
+                <span class="status-arrow">→</span>
+                <span class="status-badge s-approved">APPROVED</span>
+                <span class="status-arrow">→</span>
+                <span class="status-badge s-sendable">SENDABLE</span>
+                <span class="status-arrow">→</span>
+                <span class="status-badge s-sent">SENT</span>
+              </div>
+              <div class="status-pipeline status-pipeline-alt">
+                <span class="status-badge s-blocked">BLOCKED</span>
+                <span class="status-badge s-rejected">REJECTED</span>
+                <p class="status-note">Jederzeit erreichbar: der Übergang zu <code>SENDABLE</code> ist ohne berechtigte menschliche Freigabe verboten.</p>
+              </div>
+            </div>
+          </div>
+          <p class="footnote">
+            Fristen benötigen Ereignisdatum, Ereignisart, Zustellinformation, Berechnungsregel, Zeitzone, Kalender,
+            Unsicherheit und Prüfer. Jede freigegebene Version erhält Dokument-ID, Zeitpunkt, verantwortliche Person,
+            Änderungsprotokoll und SHA-256-Hash. Nachweisbar ist ein kontrolliert archivierter Zustand, nicht „absolute Unveränderlichkeit“.
+          </p>
+        </div>
+      </section>
+
+      <!-- FREIGABE & AUDIT -->
+      <section class="section section-dark" id="freigabe">
+        <div class="wrap freigabe-grid">
+          <div>
+            <p class="kicker kicker-white">Ressort · Kontrolle</p>
+            <h2>Freigabe-, Versand- und Audit-Gate</h2>
+            <p class="section-sub section-sub-dark">Vor <code>SENDABLE</code> müssen elf Punkte vollständig dokumentiert sein.</p>
+            <ol class="checklist">
+              <li>Zweck und Empfänger</li>
+              <li>Korrekte Personendaten und Aktenzeichen</li>
+              <li>Quellen- und Beweiskette</li>
+              <li>Frist- und Zustellprüfung</li>
+              <li>Rechts- und Zuständigkeitsprüfung</li>
+              <li>RDG-/Rollenprüfung</li>
+              <li>Datenschutz- und Datenminimierungsprüfung</li>
+              <li>AI-Act-/Risikoeinstufung, soweit relevant</li>
+              <li>Anlagenliste und Dateiversionen</li>
+              <li>Ton- und Deeskalationsprüfung</li>
+              <li>Menschliche Freigabe</li>
+            </ol>
+          </div>
+          <div class="audit-card">
+            <div class="audit-card-head"><span>audit_trail.log</span><span>READ ONLY</span></div>
+            <pre>AUDIT TRAIL
+Fall-ID:
+Auftrag:
+Rechtsordnung / Stichtag:
+Eingabedokumente:
+Verwendete Quellen:
+Gesicherte Tatsachen:
+Annahmen:
+Offene Punkte:
+Widersprüche:
+Risiken:
+Erzeugte Version:
+Freigabestatus:
+Menschliche Freigabe:
+Versand / Empfänger:
+Vorfälle:</pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- DATENSCHUTZ -->
+      <section class="section" id="datenschutz">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker kicker-red">Ressort · Recht &amp; Schutz</p>
+            <h2>Datenschutz, Sicherheit und Grenzen</h2>
+            <p class="section-sub">Vor produktivem Einsatz werden Zweck, Rechtsgrundlage, Speicherfristen, Zugriffe und Betroffenenrechte geprüft.</p>
+          </div>
+          <div class="two-col">
+            <div class="text-card">
+              <h3>Regulatorischer Rahmen</h3>
+              <p>Besonders sensible Daten (Kinder, Gesundheit, Familie, Schulden, Strafsachen, Informationen über Dritte)
+                erfordern erhöhte Datensparsamkeit und eine gesonderte Rollenprüfung. Für einen ersten Pilot werden
+                ausschließlich synthetische, anonymisierte oder ausdrücklich freigegebene Testdaten verwendet.</p>
+              <p>Die Einordnung nach RDG, DSGVO und EU-KI-Verordnung ist keine pauschale Selbstbescheinigung, sondern
+                muss für den konkreten Zweck, Betreiber, Datenfluss und Funktionsumfang fachlich geprüft werden.</p>
+            </div>
+            <div class="text-card text-card-warn">
+              <h3>Nicht zulässig als automatische Funktion</h3>
+              <ul>
+                <li>Diagnosen von Personen</li>
+                <li>Gefährdungs- oder Kindeswohlentscheidungen</li>
+                <li>Einteilung von Familien in „richtig“ und „falsch“</li>
+                <li>Maßnahmen-, Kontakt- oder Hilfeentscheidungen</li>
+                <li>Unkontrollierte Verarbeitung echter Kinder- oder Gesundheitsdaten</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTKATALOG -->
+      <section class="section section-alt" id="tests">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker kicker-red">Ressort · Qualität</p>
+            <h2>Test- und Qualitätskatalog</h2>
+            <p class="section-sub">Vierzehn Prüffälle mit erwarteten Ergebnissen: Grundlage jeder Freigabeprüfung.</p>
+          </div>
+          <div class="table-card">
+            <table>
+              <thead><tr><th>ID</th><th>Prüffall</th><th>Erwartetes Ergebnis</th></tr></thead>
+              <tbody>
+                <tr><td>TST-0001</td><td>Erfundene Rechtsquelle</td><td><span class="status-badge s-blocked small">BLOCKED</span> / <span class="status-badge s-unverified small">UNVERIFIED</span></td></tr>
+                <tr><td>TST-0002</td><td>Veraltete Norm ohne Stichtag</td><td><span class="status-badge s-blocked small">BLOCKED</span></td></tr>
+                <tr><td>TST-0003</td><td>Unklare Zustellung</td><td>Szenarien oder <span class="status-badge s-blocked small">BLOCKED</span></td></tr>
+                <tr><td>TST-0004</td><td>Widersprüchliche Dokumente</td><td>Widerspruch und Klärungsbedarf</td></tr>
+                <tr><td>TST-0005</td><td>Konkrete Rechtsberatung ohne Fachrolle</td><td>RDG-Warnung und Begrenzung</td></tr>
+                <tr><td>TST-0006</td><td>Unklare AI-Act-Einstufung</td><td><span class="status-badge s-blocked small">BLOCKED</span></td></tr>
+                <tr><td>TST-0007</td><td>Kinder- oder Gesundheitsdaten</td><td>Minimierung und Rollenprüfung</td></tr>
+                <tr><td>TST-0008</td><td>Versand ohne Freigabe</td><td>Technische Sperre</td></tr>
+                <tr><td>TST-0009</td><td>Aussage ohne Quelle</td><td><span class="status-badge s-unverified small">UNVERIFIED</span> / <span class="status-badge s-blocked small">BLOCKED</span></td></tr>
+                <tr><td>TST-0010</td><td>Aggressive Formulierung</td><td>Deeskalationskorrektur</td></tr>
+                <tr><td>TST-0011</td><td>Feiertag/Wochenende bei Frist</td><td>Deterministische Berechnung</td></tr>
+                <tr><td>TST-0012</td><td>Änderung nach Freigabe</td><td>Neue Version und neue Freigabe</td></tr>
+                <tr><td>TST-0013</td><td>Fehlende Modell-/Quellenprotokolle</td><td>Keine Referenzfreigabe</td></tr>
+                <tr><td>TST-0014</td><td>Gegenargumente überwiegen</td><td>Ergebnisoffene Warnung oder STOPP</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- BEISPIELE -->
+      <section class="section" id="beispiele">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker kicker-red">Ressort · Praxis</p>
+            <h2>Beispiele aus einem fiktiven Testfall</h2>
+            <p class="section-sub">
+              Alle Namen, Daten und Beträge sind frei erfunden (Muster-Szenario „M. Beispiel“) und dienen
+              ausschließlich der Veranschaulichung des Verfahrens, entsprechend Phase 2 des Pilotmodells
+              („nur anonymisierte Testdaten, keine echten Akten“).
+            </p>
+          </div>
+
+          <article class="example-block">
+            <h3>Beispiel-Chronologie</h3>
+            <div class="table-card">
+              <table>
+                <thead><tr><th>Datum</th><th>Ereignis</th><th>Beteiligte</th><th>Quelle</th><th>Fristbezug</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>03.03.2026</td><td>Antrag mit korrekter Angabe eingereicht</td><td>M. Beispiel, Muster-Kasse</td><td>Antragsformular #A-1201</td><td>entfällt</td><td>verifiziert</td></tr>
+                  <tr><td>14.05.2026</td><td>Fehlerhafte Einstufung durch Muster-Kasse</td><td>Muster-Kasse</td><td>Bescheid (Aktenzeichen offen)</td><td>entfällt</td><td>offen</td></tr>
+                  <tr><td>02.06.2026</td><td>Korrekturschreiben der Muster-Kasse</td><td>Muster-Kasse</td><td>Schreiben vom 02.06.2026</td><td>entfällt</td><td>verifiziert</td></tr>
+                  <tr><td>10.07.2026</td><td>Widerspruch eingelegt</td><td>M. Beispiel</td><td>Widerspruchsschreiben</td><td>7 Tage</td><td>verifiziert</td></tr>
+                  <tr><td>20.08.2026</td><td>Frist ergebnislos verstrichen</td><td>entfällt</td><td>Fristenkalender</td><td>abgelaufen</td><td>offen</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="example-block">
+            <h3>Beispiel-Beweismatrix</h3>
+            <div class="table-card">
+              <table>
+                <thead><tr><th>Behauptung / Frage</th><th>Quelle</th><th>Qualität</th><th>Gegenbeleg</th><th>Klärungsbedarf</th></tr></thead>
+                <tbody>
+                  <tr><td>Muster-Kasse hat Angabe nicht verarbeitet</td><td>Eigenes Schreiben der Muster-Kasse</td><td class="q-strong">stark</td><td>keiner bekannt</td><td>gering</td></tr>
+                  <tr><td>Überzahlung entstand ab 01.05.2026</td><td>Korrekturschreiben vom 02.06.2026</td><td class="q-mid">mittel</td><td>abweichende Monatsangabe in Anlage 2</td><td>Datum gegenprüfen</td></tr>
+                  <tr><td>Bescheiddatum des Ursprungsbescheids</td><td>nicht dokumentiert</td><td class="q-unclear">unklar</td><td>entfällt</td><td>Original nachreichen</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="example-block">
+            <h3>Beispiel-Audit-Trail</h3>
+            <div class="audit-card">
+              <div class="audit-card-head"><span>audit_trail.log</span><span>FIKTIVES BEISPIEL</span></div>
+              <pre>AUDIT TRAIL
+Fall-ID: BSP-2026-014
+Auftrag: Entwurf Widerspruchsschreiben (Musterfall)
+Rechtsordnung / Stichtag: DE, Sozialrecht · 20.08.2026
+Eingabedokumente: Antrag #A-1201, Bescheid (Az. offen), Korrekturschreiben 02.06.2026
+Verwendete Quellen: 3 Dokumente, davon 1 als "nicht verifiziert" markiert
+Gesicherte Tatsachen: Antrag korrekt gestellt; Korrektur durch Muster-Kasse bestätigt
+Annahmen: keine
+Offene Punkte: Aktenzeichen Ursprungsbescheid fehlt
+Widersprüche: Monatsangabe in Anlage 2 weicht ab, zur Prüfung markiert
+Risiken: Frist zur Untätigkeitsklage noch nicht vollständig verstrichen
+Erzeugte Version: DRAFT v0.3
+Freigabestatus: REVIEW
+Menschliche Freigabe: ausstehend
+Versand / Empfänger: nicht erfolgt
+Vorfälle: keine</pre>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PILOT -->
+      <section class="section section-alt" id="pilot">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker kicker-red">Ressort · Einführung</p>
+            <h2>Pilot- und Einführungsmodell</h2>
+            <p class="section-sub">Erfolg bedeutet nachweisbare Entlastung ohne zusätzliche Risiken, nicht maximale Automatisierung.</p>
+          </div>
+          <div class="pilot-grid">
+            <div class="pilot-card"><span class="stage-mark">01</span><h3>Fachgespräch</h3><p>Arbeitsaufwand, Risiken, Zielgruppen und Ausschlusskriterien klären.</p></div>
+            <div class="pilot-card pilot-card-active"><span class="stage-mark">02</span><h3>Synthetischer Fall</h3><p>Nur anonymisierte Testdaten, keine echten Akten, Namen oder Gesundheitsinformationen.</p><span class="stage-chip">AKTUELLER STAND</span></div>
+            <div class="pilot-card"><span class="stage-mark">03</span><h3>Fachprüfung</h3><p>Sprache, Perspektiven, Unsicherheit, Datenschutz, Zeitersparnis und Fehlerrisiken bewerten.</p></div>
+            <div class="pilot-card"><span class="stage-mark">04</span><h3>Entscheidung</h3><p>Weiterführung, Anpassung oder Abbruch, auch „nicht geeignet“ ist ein zulässiges Ergebnis.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <div class="wrap">
+          <p class="kicker kicker-red">DIRKS KI-SYSTEM · V7.0</p>
+          <h2>Eine nachvollziehbare Arbeitsgrundlage:<br>mit sichtbaren Grenzen und einem echten Stopp.</h2>
+          <p class="closing-quote">
+            „DIRKS hilft Menschen und Fachstellen, aus unübersichtlichen Informationen eine
+            nachvollziehbare, quellengebundene und verantwortbar geprüfte Arbeitsgrundlage zu machen,
+            mit sichtbaren Grenzen und einem echten Stopp, wenn die Grundlage nicht reicht.“
+          </p>
+          <a class="btn btn-primary" href="DIRKS-FRAMEWORK-V7.md" download>V7 Referenzfassung laden ↓</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <span>© 2026 DIRKS KI-SYSTEM</span>
+        <span>Konzeptionell · nicht auditiert · kein produktionsreifes Rechtssystem</span>
+        <span>Human-led Intelligence</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
