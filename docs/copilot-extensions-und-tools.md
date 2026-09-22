@@ -45,7 +45,7 @@ offizielle GitHub-Dokumentation, GitHub-Blog.
 | Arm | Arm-Cloud-Infrastruktur verwalten |
 
 Aktuelle MCP-Integrationen und Discovery-Einstiegspunkte:
-- GitHub MCP Registry: https://github.com/mcp
+- GitHub-MCP-Organisation mit Server-Repos und Discovery-Startpunkt: https://github.com/mcp
 - Community-Sammlung: https://github.com/github/awesome-copilot
 
 ## 3. Copilot CLI – Plugins & MCP-Server
