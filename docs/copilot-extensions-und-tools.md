@@ -4,7 +4,13 @@
 um GitHub Copilot (Stand: September 2026). Quellen: GitHub Marketplace,
 offizielle GitHub-Dokumentation, GitHub-Blog.
 
-## 1. Offizielle Copilot Extensions (Marketplace)
+> **Wichtig:** Die serverseitigen, GitHub-App-basierten Copilot Extensions auf
+> GitHub.com wurden am **2025-11-10** eingestellt. Die beiden folgenden
+> Tabellen sind deshalb **historisch**; für neue Integrationen verweist GitHub
+> auf MCP-Server und die GitHub MCP Registry:
+> https://github.blog/changelog/2025-09-24-deprecate-github-copilot-extensions-github-apps/
+
+## 1. Historische offizielle Copilot Extensions (Marketplace)
 
 | Extension | Zweck |
 |---|---|
@@ -14,7 +20,7 @@ offizielle GitHub-Dokumentation, GitHub-Blog.
 | Microsoft Teams | Benachrichtigungen und Workflow-Aktionen in Teams |
 | GitHub Copilot Debug CLI | Extensions vom Terminal aus bauen/testen/debuggen |
 
-## 2. Bekannte Drittanbieter-Extensions
+## 2. Historische Drittanbieter-Extensions
 
 | Extension | Zweck |
 |---|---|
@@ -38,7 +44,9 @@ offizielle GitHub-Dokumentation, GitHub-Blog.
 | Mermaid Chart | Diagramme per natürlicher Sprache erzeugen |
 | Arm | Arm-Cloud-Infrastruktur verwalten |
 
-Vollständige, aktuelle Liste: https://github.com/marketplace?type=copilot-extensions
+Aktuelle MCP-Integrationen und Discovery-Einstiegspunkte:
+- GitHub-MCP-Organisation mit Server-Repos und Discovery-Startpunkt: https://github.com/mcp
+- Community-Sammlung: https://github.com/github/awesome-copilot
 
 ## 3. Copilot CLI – Plugins & MCP-Server
 
@@ -53,18 +61,23 @@ copilot plugin install PLUGIN-NAME@MARKETPLACE-NAME
 
 # MCP-Server
 copilot mcp list
-copilot mcp add <name>
+copilot mcp add SERVER-NAME -- COMMAND [ARGS...]
+copilot mcp add --transport http SERVER-NAME URL
 copilot mcp remove <name>
 ```
 
 Konfigurationsorte: global `~/.copilot/mcp-config.json`,
-projektbezogen `.github/mcp.json` bzw. `.vscode/mcp.json`.
+projektbezogen `.mcp.json` bzw. `.github/mcp.json`.
 
-Relevante Repos/Registries:
+`.vscode/mcp.json` ist für VS Code relevant, wird aber von Copilot CLI nicht
+ausgewertet.
+
+Relevante Repos und Beispielserver:
 - https://github.com/github/awesome-copilot – Community-Sammlung von
   Instructions, Prompts, Skills, Agents und MCP-Server-Konfigurationen.
 - https://github.com/microsoft/mcp-dotnet-samples (Ordner `awesome-copilot`) –
-  MCP-Server als Katalog/Registry für Copilot-Anpassungen.
+  Beispiel eines MCP-Servers, der Anpassungen aus `github/awesome-copilot`
+  abruft; keine eigene Marketplace-/Registry-Quelle.
 
 Beispiel für einen häufig genutzten MCP-Server (Browserautomatisierung):
 ```sh
