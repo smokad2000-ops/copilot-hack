@@ -1,9 +1,14 @@
 # Create a base Flask server
 
+import os
 import pickle
-from flask import Flask, request, jsonify
+from pathlib import Path
 
+from flask import Flask, jsonify, request
+
+BASE_DIR = Path(__file__).resolve().parent
 app = Flask(__name__)
+
 
 # Enable cors
 @app.after_request
@@ -13,11 +18,13 @@ def after_request(response):
     """
     response.headers.add('Access-Control-Allow-Origin', '*')
     response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET, OPTIONS')
     return response
 
 
-# Load model from pickle file
-model = pickle.load(open('model.pkl', 'rb'))
+# Load model and data from files relative to this module so it also works when the
+# server is started from a different working directory or from a remote environment.
+model = pickle.load(open(BASE_DIR / 'model.pkl', 'rb'))
 
 # Model takes two parameters - day of week and airport id, then returns a prediction of flight delay
 @app.route('/predict', methods=['GET'])
@@ -46,7 +53,8 @@ def predict():
 @app.route('/airports', methods=['GET'])
 def airports():
     # Load airports from csv file
-    airports = open('airports.csv', 'r').readlines()
+    with open(BASE_DIR / 'airports.csv', 'r', encoding='utf-8') as airport_file:
+        airports = airport_file.readlines()
 
     # Remove first line of airports
     airports.pop(0)
@@ -62,4 +70,4 @@ def airports():
     return jsonify(airports)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
