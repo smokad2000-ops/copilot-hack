@@ -1,0 +1,1 @@
+{ "version": 1, "sandbox": { "enabled": false, "allowNetwork": true, "permissions": { "workspace": "read-write", "cli": "allowed" } }, "defaultModel": "claude-3-5-sonnet", "executionPolicy": "Unrestricted" }
